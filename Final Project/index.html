@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The main page for the CSE 121B Final Project" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="dice.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="graph.css">
+
+    <title>CSE 121B Final Project</title>
+</head>
+
+<body>
+    <main class="grid-main">
+        <div class="controls">
+            <h1 class="title">Rolling and Tracking the Dice</h1>
+            
+            <div class="buttons">
+                <button id="rollbttn" type="button">Roll the Dice</button>
+                <button id="againbttn" type="button">Start Again</button>
+                <button id="showbttn" type="button">Show Statistics</button>
+            </div>
+
+            <h2 class="finalTotal">The total count of rolls is: <span id="total"></span></h2>
+            <p id="result"></p>
+        
+        </div>
+        
+        <div class="game">
+            <div class="container">
+                <div id='dice1' class="dice dice-one">
+                    <div id="dice-one-side-one" class='side one'>
+                        <div class="dot one-1"></div>
+                    </div>
+                    <div id="dice-one-side-two" class='side two'>
+                        <div class="dot two-1"></div>
+                        <div class="dot two-2"></div>
+                    </div>
+                    <div id="dice-one-side-three" class='side three'>
+                        <div class="dot three-1"></div>
+                        <div class="dot three-2"></div>
+                        <div class="dot three-3"></div>
+                    </div>
+                    <div id="dice-one-side-four" class='side four'>
+                        <div class="dot four-1"></div>
+                        <div class="dot four-2"></div>
+                        <div class="dot four-3"></div>
+                        <div class="dot four-4"></div>
+                    </div>
+                    <div id="dice-one-side-five" class='side five'>
+                        <div class="dot five-1"></div>
+                        <div class="dot five-2"></div>
+                        <div class="dot five-3"></div>
+                        <div class="dot five-4"></div>
+                        <div class="dot five-5"></div>
+                    </div>
+                    <div id="dice-one-side-six" class='side six'>
+                        <div class="dot six-1"></div>
+                        <div class="dot six-2"></div>
+                        <div class="dot six-3"></div>
+                        <div class="dot six-4"></div>
+                        <div class="dot six-5"></div>
+                        <div class="dot six-6"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id='dice2' class="dice dice-two">
+                    <div id="dice-two-side-one" class='side one'>
+                        <div class="dot one-1"></div>
+                    </div>
+                    <div id="dice-two-side-two" class='side two'>
+                        <div class="dot two-1"></div>
+                        <div class="dot two-2"></div>
+                    </div>
+                    <div id="dice-two-side-three" class='side three'>
+                        <div class="dot three-1"></div>
+                        <div class="dot three-2"></div>
+                        <div class="dot three-3"></div>
+                    </div>
+                    <div id="dice-two-side-four" class='side four'>
+                        <div class="dot four-1"></div>
+                        <div class="dot four-2"></div>
+                        <div class="dot four-3"></div>
+                        <div class="dot four-4"></div>
+                    </div>
+                    <div id="dice-two-side-five" class='side five'>
+                        <div class="dot five-1"></div>
+                        <div class="dot five-2"></div>
+                        <div class="dot five-3"></div>
+                        <div class="dot five-4"></div>
+                        <div class="dot five-5"></div>
+                    </div>
+                    <div id="dice-two-side-six" class='side six'>
+                        <div class="dot six-1"></div>
+                        <div class="dot six-2"></div>
+                        <div class="dot six-3"></div>
+                        <div class="dot six-4"></div>
+                        <div class="dot six-5"></div>
+                        <div class="dot six-6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="graph" style="display: none;">
+            <caption>Count of Rolls per Number</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Number</th>
+                    <th scope="col">Amount of Rolls</th>
+                </tr>
+            </thead>
+            <tbody class="horizontal">
+                <tr id="number2">
+                    <th scope="row">2</th>
+                    <td><span id="disNum2"></span></td>
+                </tr>
+                <tr id="number3">
+                    <th scope="row">3</th>
+                    <td><span id="disNum3"></span></td>
+                </tr>
+                <tr id="number4">
+                    <th scope="row">4</th>
+                    <td><span id="disNum4"></span></td>
+                </tr>
+                <tr id="number5">
+                    <th scope="row">5</th>
+                    <td><span id="disNum5"></span></td>
+                </tr>
+                <tr id="number6">
+                    <th scope="row">6</th>
+                    <td><span id="disNum6"></span></td>
+                </tr>
+                <tr id="number7">
+                    <th scope="row">7</th>
+                    <td><span id="disNum7"></span></td>
+                </tr>
+                <tr id="number8">
+                    <th scope="row">8</th>
+                    <td><span id="disNum8"></span></td>
+                </tr>
+                <tr id="number9">
+                    <th scope="row">9</th>
+                    <td><span id="disNum9"></span></td>
+                </tr>
+                <tr id="number10">
+                    <th scope="row">10</th>
+                    <td><span id="disNum10"></span></td>
+                </tr>
+                <tr id="number11">
+                    <th scope="row">11</th>
+                    <td><span id="disNum11"></span></td>
+                </tr>
+                <tr id="number12">
+                    <th scope="row">12</th>
+                    <td><span id="disNum12"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

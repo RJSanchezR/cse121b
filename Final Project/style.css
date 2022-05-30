@@ -1,0 +1,69 @@
+* {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #f8f8f8;
+    background-color: #008F81;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.controls {
+    grid-column: 1/4;
+    color: #f8f8f8;
+    background-color: #0D3B66;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    grid-column: 1/4;
+    padding: 1.5rem;
+}
+
+.buttons {
+    grid-column: 1/4;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #f8f8f8;
+    background-color: #008F81;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(97, 97, 97);
+}
+
+button:hover {
+    color: black;
+    background-color: #efdb03
+}
+
+button:active {
+    color: black;
+    background-color: #efdb03;
+    box-shadow: 0 5px rgb(32, 32, 32);
+    transform: translateY(4px);
+}
+
+.finalTotal {
+    grid-column: 2/3;
+    padding: 2rem;
+}
+
+.graph {
+    grid-column: 2/3;
+}
